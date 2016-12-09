@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'stats/index'
+  root 'stats#index'
 
   get 'stats/show'
 
