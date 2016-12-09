@@ -1,6 +1,8 @@
 <h1>enter summoner name</h1>
 
-<%= @response %>
+<%= @body %>
+<br>
+<%= @id %>
 
 <%= form_tag(stats_show_path, :method => "get") do %>
   <%= label_tag(:summoner_name, "Search for:") %>
