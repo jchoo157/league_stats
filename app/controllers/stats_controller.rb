@@ -14,7 +14,7 @@ class StatsController < ApplicationController
     response = HTTParty.get(base_uri + "#{summoner_name}" + api_key)
     @body = JSON.parse(response.body)
     id = @body["#{summoner_name}"]["id"].to_s
-    stats_url = summoner_stats_search_start + id + summoner_stats_search_tail + api_key_two
+    stats_url = summoner_stats_search(id) + api_key_two
     stats_response = HTTParty.get(stats_url)
     @stats_body = JSON.parse(stats_response.body)
   end
