@@ -4,20 +4,12 @@ class ApplicationController < ActionController::Base
 
   private
 
-  def base_uri
-    'https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/'
-  end
-
-  def api_key
-    '?api_key=45ff6a4c-f994-420d-a018-189db4cb494e'
-  end
-
-  def api_key_two
-    '&api_key=45ff6a4c-f994-420d-a018-189db4cb494e'
+  def base_uri(summoner_name)
+    'https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/' + summoner_name + '?api_key='
   end
 
   def summoner_stats_search(id)
-    'https://na.api.pvp.net/api/lol/na/v1.3/stats/by-summoner/' + id + '/summary?season=SEASON2016'
+    'https://na.api.pvp.net/api/lol/na/v1.3/stats/by-summoner/' + id + '/summary?season=SEASON2016&api_key='
   end
 
 
