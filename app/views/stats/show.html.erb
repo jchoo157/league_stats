@@ -1,3 +1,37 @@
 <%= @body %>
 <h1>stats</h1>
 <%= @stats_body %>
+
+<p>-----------------</p>
+<table>
+  <tr>
+    <th>Champion</th>
+    <th>Summoner Spells</th>
+    <th>json</th>
+    <th>KDA</th>
+    <th>Gold</th>
+    <th>Items</th>
+  </tr>
+
+  <% @games_body.each do |game| %>
+    <tr>
+      <td><%= image_tag(champion_icon_art(game["championId"]), class: "champ_icon") %></td>
+      <td><%= image_tag(summoner_spell_image(game["spell1"])) %> | <%= image_tag(summoner_spell_image(game["spell2"])) %></td>
+      <td><%= game %></td>
+      <td><%= game["stats"]["championsKilled"].to_s + "/" + game["stats"]["numDeaths"].to_s + "/" + game["stats"]["assists"].to_s %></td>
+      <td>wakka</td>
+      <td>
+        <% items_id = [game["stats"]["item0"].to_s, game["stats"]["item1"].to_s, game["stats"]["item2"].to_s, game["stats"]["item3"].to_s, game["stats"]["item4"].to_s, game["stats"]["item5"].to_s, game["stats"]["item6"].to_s] %>
+
+        <% items_id.each do |id| %>
+          <% if id.nil? %>
+            
+          <% else %>
+            <%= image_tag(item_image(id.to_s)) %>
+          <% end %>
+        <% end %> 
+      </td>
+    </tr>
+  <% end %>
+
+</table>
