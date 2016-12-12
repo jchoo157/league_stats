@@ -1,2 +1,4 @@
 <h1>Champions#index</h1>
-<p>Find me in app/views/champions/index.html.erb</p>
+<%= @champions.each do |champion| %>
+  <%= image_tag(champion_image_url(champion[1]["id"])) %>
+<% end %>

@@ -21,8 +21,4 @@ class ApplicationController < ActionController::Base
   def champions_url
     "https://global.api.pvp.net/api/lol/static-data/na/v1.2/champion?api_key=" + ENV['LEAGUE_API']
   end
-
-  def champions_json
-    @champions = JSON.parse(champions_url)
-  end
 end
