@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'champions/index'
+
+  get 'champions/show'
+
   root 'stats#index'
 
   get 'stats/show'
