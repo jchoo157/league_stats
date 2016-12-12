@@ -7,9 +7,16 @@ module StatsHelper
     JSON.parse(response.body)
   end
 
-  def champion_image_url(champ_id)
-    name = champion_data_json(champ_id)["key"]
-    "http://ddragon.leagueoflegends.com/cdn/6.24.1/img/champion/#{name}.png"
+  def get_champion_name(champ_id)
+    champion_data_json(champ_id)["key"]
+  end
+
+  def champion_icon_art(champ_id)
+    "http://ddragon.leagueoflegends.com/cdn/6.24.1/img/champion/#{get_champion_name(champ_id)}.png"
+  end
+
+  def champion_loading_screen_art(champ_id)
+    "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/#{get_champion_name(champ_id)}_0.jpg"
   end
 
   def summoner_spell_data_json(spell_id)
