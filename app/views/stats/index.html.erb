@@ -4,7 +4,7 @@
 <br>
 <%= @id %>
 
-<%= form_tag(stats_show_path, :method => "get") do %>
+<%= form_tag(stats_path, :method => "get") do %>
   <%= label_tag(:summoner_name, "Search for:") %>
   <%= text_field_tag(:summoner_name) %>
   <%= submit_tag("Search") %>

@@ -8,7 +8,7 @@ module StatsHelper
   end
 
   def champion_image_url(champ_id)
-    name = champion_data_json(champ_id)["name"]
+    name = champion_data_json(champ_id)["key"]
     "http://ddragon.leagueoflegends.com/cdn/6.24.1/img/champion/#{name}.png"
   end
 

@@ -1,11 +1,9 @@
 Rails.application.routes.draw do
-  get 'champions/index'
-
-  get 'champions/show'
+  resources :champions
 
   root 'stats#index'
 
-  get 'stats/show'
+  resource :stats
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
