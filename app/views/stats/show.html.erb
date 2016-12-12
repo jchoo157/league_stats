@@ -1,3 +1,19 @@
 <%= @body %>
 <h1>stats</h1>
 <%= @stats_body %>
+
+<p>-----------------</p>
+<table>
+  <tr>
+    <th>Champion</th>
+    <th>Summoner Spells</th>
+  </tr>
+
+  <% @games_body.each do |game| %>
+    <tr>
+      <td><%= image_tag(champion_image_url(game["championId"])) %></td>
+      <td><%= image_tag(summoner_spell_image(game["spell1"])) %> | <%= image_tag(summoner_spell_image(game["spell2"])) %></td>
+    </tr>
+  <% end %>
+
+</table>
