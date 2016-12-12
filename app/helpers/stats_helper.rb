@@ -11,10 +11,12 @@ module StatsHelper
     champion_data_json(champ_id)["key"]
   end
 
+  # used on the champions index page
   def champion_icon_art(champ_id)
     "http://ddragon.leagueoflegends.com/cdn/6.24.1/img/champion/#{get_champion_name(champ_id)}.png"
   end
 
+  # used on the champions show page
   def champion_loading_screen_art(champ_id)
     "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/#{get_champion_name(champ_id)}_0.jpg"
   end
@@ -27,5 +29,9 @@ module StatsHelper
   def summoner_spell_image(spell_id)
     spell_name = summoner_spell_data_json(spell_id)["key"]
     "http://ddragon.leagueoflegends.com/cdn/6.24.1/img/spell/#{spell_name}.png"
+  end
+
+  def items_image(item_id)
+    
   end
 end
