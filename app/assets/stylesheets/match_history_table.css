@@ -11,9 +11,9 @@ td, th {
 }
 
 .win {
-  background-color: #7fff8c;
+  background-color: #7dd888;
 }
 
 .loss {
-  background-color: #fc768f;
+  background-color: #ef4640;
 }
