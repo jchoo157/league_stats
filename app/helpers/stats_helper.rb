@@ -31,7 +31,7 @@ module StatsHelper
     "http://ddragon.leagueoflegends.com/cdn/6.24.1/img/spell/#{spell_name}.png"
   end
 
-  def items_image(item_id)
-    
+  def item_image(item_id)
+    "http://ddragon.leagueoflegends.com/cdn/6.24.1/img/item/#{item_id}.png"
   end
 end
