@@ -19,8 +19,14 @@
     <% else %>
       <tr class="win">
     <% end %>
-      <td><%= image_tag(champion_icon_art(game["championId"]), class: "champ_icon") %></td>
-      <td><%= image_tag(summoner_spell_image(game["spell1"])) %> | <%= image_tag(summoner_spell_image(game["spell2"])) %></td>
+      <td>
+        <p>Level <%= game["stats"]["level"] %></p>
+        <%= image_tag(champion_icon_art(game["championId"]), class: "champ_icon") %>
+      </td>
+      <td>
+        <%= image_tag(summoner_spell_image(game["spell1"])) %>
+        <%= image_tag(summoner_spell_image(game["spell2"])) %>  
+      </td>
       <td><%= game %></td>
       <td><%= game["stats"]["championsKilled"].to_s + "/" + game["stats"]["numDeaths"].to_s + "/" + game["stats"]["assists"].to_s %></td>
       <td><%= game["stats"]["goldEarned"] %></td>
