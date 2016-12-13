@@ -23,6 +23,8 @@
       <td>
         <p>Level <%= game["stats"]["level"] %></p>
         <%= image_tag(champion_icon_art(game["championId"]), class: "champ_icon") %>
+        <p>IP: <%= game["ipEarned"] %></p>
+        <p>Damage to Champions: <%= game["stats"]["totalDamageDealtToChampions"] %></p>
       </td>
       <td>
         <%= image_tag(summoner_spell_image(game["spell1"])) %>
