@@ -10,6 +10,10 @@ td, th {
     padding: 8px;
 }
 
-tr:nth-child(even) {
-    background-color: #dddddd;
+.win {
+  background-color: #7dd888;
+}
+
+.loss {
+  background-color: #ef4640;
 }
