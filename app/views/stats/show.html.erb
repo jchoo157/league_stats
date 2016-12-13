@@ -6,6 +6,7 @@
 <table>
   <tr>
     <th>Champion</th>
+    <th>Damage to Champions</th>
     <th>Summoner Spells</th>
     <th>json</th>
     <th>Minion Kills</th>
@@ -24,7 +25,14 @@
         <p>Level <%= game["stats"]["level"] %></p>
         <%= image_tag(champion_icon_art(game["championId"]), class: "champ_icon") %>
         <p>IP: <%= game["ipEarned"] %></p>
-        <p>Damage to Champions: <%= game["stats"]["totalDamageDealtToChampions"] %></p>
+      </td>
+      <td>
+        <h3>Magic</h3>
+        <p><%= game["stats"]["magicDamageDealtToChampions"] %></p>
+        <h3>Physical</h3>
+        <p><%= game["stats"]["physicalDamageDealtToChampions"] %></p>
+        <h3>Total</h3>
+        <p><%= game["stats"]["totalDamageDealtToChampions"] %></p>
       </td>
       <td>
         <%= image_tag(summoner_spell_image(game["spell1"])) %>
