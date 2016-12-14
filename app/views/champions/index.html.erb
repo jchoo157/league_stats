@@ -1,4 +1,6 @@
-<h1>Champions</h1>
-<% @champions.each do |champion| %>
-  <%= link_to image_tag(champion[0] + ".png"), champion_path(champion[1]["id"]) %>
-<% end %>
+<center><h1 class="title2 roboto font-size30">Champions</h1></center>
+<center><div>
+  <% @champions.each do |champion| %>
+    <%= link_to image_tag(champion[0] + ".png", class: 'champ-icon'), champion_path(champion[1]["id"]) %>
+  <% end %>
+</div></center>
