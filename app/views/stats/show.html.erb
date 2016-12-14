@@ -9,6 +9,7 @@
     <th>KDA</th>
     <th>Gold</th>
     <th>Items</th>
+    <th>IP</th>
   </tr>
 
   <% @games_body.each do |game| %>
@@ -23,7 +24,6 @@
         <br>
         <%= image_tag(summoner_spell_image(game["spell1"]), class: "summoner_spell_icon") %>
         <%= image_tag(summoner_spell_image(game["spell2"]), class: "summoner_spell_icon") %> 
-        <p>IP: <%= game["ipEarned"] %></p>
       </td>
       <td>
         <p>Magic: <%= game["stats"]["magicDamageDealtToChampions"] %></p>
@@ -45,6 +45,7 @@
           <% end %>
         <% end %> 
       </td>
+      <td>IP: <%= game["ipEarned"] %></td>
     </tr>
   <% end %>
 
