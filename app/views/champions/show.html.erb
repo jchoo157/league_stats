@@ -1,2 +1,3 @@
-<h1>Champions#show</h1>
+<h1><%= specific_champion_data(@id)["name"] + " " + specific_champion_data(@id)["title"] %></h1>
 <%= image_tag(champion_loading_screen_art(@id)) %>
+<%= specific_champion_data(@id) %>
