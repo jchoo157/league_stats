@@ -18,11 +18,11 @@
       <tr class="win">
     <% end %>
       <td>
-        <p style="margin-top: -5px; color: white; position: absolute;"><%= game["stats"]["level"] %></p>
+        <p class="level"><%= game["stats"]["level"] %></p>
         <%= image_tag(champion_icon_art(game["championId"]), class: "champ_icon") %>
         <br>
-        <%= image_tag(summoner_spell_image(game["spell1"]), class: "spell_icon") %>
-        <%= image_tag(summoner_spell_image(game["spell2"]), class: "spell_icon") %> 
+        <%= image_tag(summoner_spell_image(game["spell1"]), class: "summoner_spell_icon") %>
+        <%= image_tag(summoner_spell_image(game["spell2"]), class: "summoner_spell_icon") %> 
         <p>IP: <%= game["ipEarned"] %></p>
       </td>
       <td>
