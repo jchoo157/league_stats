@@ -1,4 +1,4 @@
-<h1>Champions#index</h1>
+<h1>Champions</h1>
 <%= @champions.each do |champion| %>
   <%= link_to image_tag(champion_icon_art(champion[1]["id"])), champion_path(champion[1]["id"]) %>
 <% end %>
