@@ -1,11 +1,13 @@
-<h1>enter summoner name</h1>
+<div class="parallax">
+  <center>
+    <h1 class="title roboto font-size30">Enter Summoner Name</h1>
 
-<%= @body %>
-<br>
-<%= @id %>
+    <br>
 
-<%= form_tag(stats_path, :method => "get") do %>
-  <%= label_tag(:summoner_name, "Search for:") %>
-  <%= text_field_tag(:summoner_name) %>
-  <%= submit_tag("Search") %>
-<% end %>
+    <%= form_tag(stats_path, :method => "get") do %>
+      <%= text_field_tag(:summoner_name) %>
+      <br>
+      <%= submit_tag("Search") %>
+    <% end %>
+  </center>
+</div>
