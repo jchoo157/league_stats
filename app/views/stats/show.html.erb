@@ -18,7 +18,7 @@
       <tr class="win">
     <% end %>
       <td>
-        <p>Level <%= game["stats"]["level"] %></p>
+        <p style="margin-top: -5px; color: white; position: absolute;"><%= game["stats"]["level"] %></p>
         <%= image_tag(champion_icon_art(game["championId"]), class: "champ_icon") %>
         <br>
         <%= image_tag(summoner_spell_image(game["spell1"]), class: "spell_icon") %>
@@ -26,12 +26,9 @@
         <p>IP: <%= game["ipEarned"] %></p>
       </td>
       <td>
-        <h3>Magic</h3>
-        <p><%= game["stats"]["magicDamageDealtToChampions"] %></p>
-        <h3>Physical</h3>
-        <p><%= game["stats"]["physicalDamageDealtToChampions"] %></p>
-        <h3>Total</h3>
-        <p><%= game["stats"]["totalDamageDealtToChampions"] %></p>
+        <p>Magic: <%= game["stats"]["magicDamageDealtToChampions"] %></p>
+        <p>Physical: <%= game["stats"]["physicalDamageDealtToChampions"] %></p>
+        <p>Total: <%= game["stats"]["totalDamageDealtToChampions"] %></p>
       </td>
       <!-- <td><%= game %></td> -->
       <td><%= game["stats"]["minionsKilled"] %></td>
@@ -44,7 +41,7 @@
           <% if id.nil? %>
 
           <% else %>
-            <%= image_tag(item_image(id.to_s)) %>
+            <%= image_tag(item_image(id.to_s), class: 'item_icon') %>
           <% end %>
         <% end %> 
       </td>

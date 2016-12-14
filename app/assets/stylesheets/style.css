@@ -66,6 +66,11 @@ input[type=submit] {
   width: 25px;
 }
 
+.item_icon {
+  height: 40px;
+  width: 40px;
+}
+
 input[type=submit]:hover {
   color: #ffffff;
   background-color: #67db6a;
