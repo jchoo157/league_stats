@@ -1,4 +1,5 @@
-<h1>stats</h1>
+<h1><%= @body[@summoner_name]["name"] %></h1>
+<h3>Level: <%= @body[@summoner_name]["summonerLevel"] %></h3>
 
 <table>
   <tr>
@@ -9,6 +10,7 @@
     <th>KDA</th>
     <th>Gold</th>
     <th>Items</th>
+    <th>IP</th>
   </tr>
 
   <% @games_body.each do |game| %>
@@ -18,20 +20,16 @@
       <tr class="win">
     <% end %>
       <td>
-        <p>Level <%= game["stats"]["level"] %></p>
+        <p class="level"><%= game["stats"]["level"] %></p>
         <%= image_tag(champion_icon_art(game["championId"]), class: "champ_icon") %>
         <br>
-        <%= image_tag(summoner_spell_image(game["spell1"])) %>
-        <%= image_tag(summoner_spell_image(game["spell2"])) %> 
-        <p>IP: <%= game["ipEarned"] %></p>
+        <%= image_tag(summoner_spell_image(game["spell1"]), class: "summoner_spell_icon") %>
+        <%= image_tag(summoner_spell_image(game["spell2"]), class: "summoner_spell_icon") %> 
       </td>
       <td>
-        <h3>Magic</h3>
-        <p><%= game["stats"]["magicDamageDealtToChampions"] %></p>
-        <h3>Physical</h3>
-        <p><%= game["stats"]["physicalDamageDealtToChampions"] %></p>
-        <h3>Total</h3>
-        <p><%= game["stats"]["totalDamageDealtToChampions"] %></p>
+        <p><b>Magic:</b> <%= game["stats"]["magicDamageDealtToChampions"] %></p>
+        <p><b>Physical:</b> <%= game["stats"]["physicalDamageDealtToChampions"] %></p>
+        <p><b>Total:</b> <%= game["stats"]["totalDamageDealtToChampions"] %></p>
       </td>
       <!-- <td><%= game %></td> -->
       <td><%= game["stats"]["minionsKilled"] %></td>
@@ -44,10 +42,11 @@
           <% if id.nil? %>
 
           <% else %>
-            <%= image_tag(item_image(id.to_s)) %>
+            <%= image_tag(item_image(id.to_s), class: 'item_icon') %>
           <% end %>
         <% end %> 
       </td>
+      <td>IP: <%= game["ipEarned"] %></td>
     </tr>
   <% end %>
 
