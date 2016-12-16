@@ -5,8 +5,24 @@ class StatsController < ApplicationController
 
   def index
     response = HTTParty.get(base_uri('choobie'))
-    @body = JSON.parse(response.body)
-    @id = @body["choobie"]["id"]
+    # doublelift
+    doublelift_response = HTTParty.get(base_uri('doublelift'))
+    @doublelift_body = JSON.parse(doublelift_response.body)
+    # bjergson
+    bjergsen_response = HTTParty.get(base_uri('bjergsen'))
+    @bjergsen_body = JSON.parse(bjergsen_response.body)
+    # hauntzer
+    hauntzer_response = HTTParty.get(base_uri('hauntzer'))
+    @hauntzer_body = JSON.parse(hauntzer_response.body)
+    # wildturtle
+    wildturtle_response = HTTParty.get(base_uri('wildturtle'))
+    @wildturtle_body = JSON.parse(wildturtle_response.body)
+    #biofrost
+    biofrost_response = HTTParty.get(base_uri('biofrost'))
+    @biofrost_body = JSON.parse(biofrost_response.body)
+    #svenskeren
+    svenskeren_response = HTTParty.get(base_uri('svenskeren'))
+    @svenskeren_body = JSON.parse(svenskeren_response.body)
   end
 
   def show
