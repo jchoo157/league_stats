@@ -1,5 +1,5 @@
 .section1 {
-  background-color: #7FEF67;
+  background-color: white;
   padding-bottom: 50px;
   padding-top: 1px;
 }
@@ -7,7 +7,7 @@
 .pro_h1 {
   font-family: 'Anton', sans-serif; 
   font-size: 50px; 
-  color: #d3eeff; 
+  color: #2d2d2d; 
   text-shadow: 1px 1px black;
 }
 
