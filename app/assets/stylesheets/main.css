@@ -23,7 +23,7 @@
   margin: 25px 0;
     height: 1px;
     background: black;
-    background: -webkit-gradient(linear, 0 0, 100% 0, from(#7FEF67), to(#7FEF67), color-stop(50%, black));
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(white), to(white), color-stop(50%, black));
 }
 
 .pro_div {
