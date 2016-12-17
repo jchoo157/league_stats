@@ -3,8 +3,9 @@
     margin: 0px;
     padding: 0px;
     overflow: hidden;
-    position: absolute;
     z-index: 1;
+    background-color: #0F101F;
+    font-family: 'Coda', cursive;
 }
 
 #navbar > li {
@@ -12,6 +13,7 @@
 }
 
 #navbar > li > a {
+
     display: block;
     color: white;
     text-align: center;
@@ -22,6 +24,10 @@
 
 #navbar > li > a:hover {
     background-color: #4CAF50;
+}
+
+#navbar > li {
+    border-right: 1px solid #545454;
 }
 
 .active {

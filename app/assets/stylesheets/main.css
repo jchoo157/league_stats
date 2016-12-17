@@ -4,6 +4,14 @@
   padding-top: 1px;
 }
 
+.elite {
+  font-family: 'Special Elite', cursive;
+}
+
+.coda {
+  font-family: 'Coda', cursive;
+}
+
 .pro_h1 {
   font-family: 'Anton', sans-serif; 
   font-size: 50px; 
@@ -15,7 +23,6 @@
   height: 150px;
   width: 150px;
   border-radius: 50%;
-  box-shadow: 2px 2px 2px #5faf4d;
 
 }
 

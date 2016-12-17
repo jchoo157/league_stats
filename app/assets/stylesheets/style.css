@@ -91,3 +91,6 @@ input[type=submit]:hover {
 
 .grow { transition: all .3s ease-in-out; }
 .grow:hover { transform: scale(1.1); background-color: green;}
+
+.grow-pro { transition: all .3s ease-in-out; }
+.grow-pro:hover { transform: scale(1.1);}
