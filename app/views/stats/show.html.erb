@@ -1,55 +1,57 @@
-<h1><%= @body[@summoner_name]["name"] %></h1>
-<h3>Level: <%= @body[@summoner_name]["summonerLevel"] %></h3>
+<div>
+  <h1><%= @body[@summoner_name]["name"] %></h1>
+  <h3>Level: <%= @body[@summoner_name]["summonerLevel"] %></h3>
 
-<center><table class="matches">
-  <tr>
-    <th>Champion</th>
-    <th>Damage to Champions</th>
-    <!-- <th>json</th> -->
-    <th>Stats</th>
-    <th>Items</th>
-    <th>IP</th>
-  </tr>
-
-  <% @games_body.each do |game| %>
-    <% if game["stats"]["win"] == false %>
-      <tr class="loss grow2">
-    <% else %>
-      <tr class="win grow1">
-    <% end %>
-      <td>
-        <p class="level"><%= game["stats"]["level"] %></p>
-        <%= image_tag(champion_icon_art(game["championId"]), class: "champ_icon") %>
-        <br>
-        <%= image_tag(summoner_spell_image(game["spell1"]), class: "summoner_spell_icon") %>
-        <%= image_tag(summoner_spell_image(game["spell2"]), class: "summoner_spell_icon") %> 
-      </td>
-      <td>
-        <p><b>Magic:</b> <%= game["stats"]["magicDamageDealtToChampions"] %></p>
-        <p><b>Physical:</b> <%= game["stats"]["physicalDamageDealtToChampions"] %></p>
-        <p><b>Total:</b> <%= game["stats"]["totalDamageDealtToChampions"] %></p>
-      </td>
-      <!-- <td><%= game %></td> -->
-      <td>
-        <%= game["stats"]["minionsKilled"] %>
-        <br>
-        <%= game["stats"]["championsKilled"].to_s + "/" + game["stats"]["numDeaths"].to_s + "/" + game["stats"]["assists"].to_s %>
-        <br>
-        <%= game["stats"]["goldEarned"] %>
-      </td>
-      <td>
-        <% items_id = [game["stats"]["item0"].to_s, game["stats"]["item1"].to_s, game["stats"]["item2"].to_s, game["stats"]["item3"].to_s, game["stats"]["item4"].to_s, game["stats"]["item5"].to_s, game["stats"]["item6"].to_s] %>
-
-        <% items_id.each do |id| %>
-          <% if id.nil? %>
-
-          <% else %>
-            <%= image_tag(item_image(id.to_s), class: 'item_icon') %>
-          <% end %>
-        <% end %> 
-      </td>
-      <td>IP: <%= game["ipEarned"] %></td>
+  <center><table class="matches">
+    <tr>
+      <th>Champion</th>
+      <th>Damage to Champions</th>
+      <!-- <th>json</th> -->
+      <th>Stats</th>
+      <th>Items</th>
+      <th>IP</th>
     </tr>
-  <% end %>
 
-</table></center>
+    <% @games_body.each do |game| %>
+      <% if game["stats"]["win"] == false %>
+        <tr class="loss grow2">
+      <% else %>
+        <tr class="win grow1">
+      <% end %>
+        <td>
+          <p class="level"><%= game["stats"]["level"] %></p>
+          <%= image_tag(champion_icon_art(game["championId"]), class: "champ_icon") %>
+          <br>
+          <%= image_tag(summoner_spell_image(game["spell1"]), class: "summoner_spell_icon") %>
+          <%= image_tag(summoner_spell_image(game["spell2"]), class: "summoner_spell_icon") %> 
+        </td>
+        <td>
+          <p><b>Magic:</b> <%= game["stats"]["magicDamageDealtToChampions"] %></p>
+          <p><b>Physical:</b> <%= game["stats"]["physicalDamageDealtToChampions"] %></p>
+          <p><b>Total:</b> <%= game["stats"]["totalDamageDealtToChampions"] %></p>
+        </td>
+        <!-- <td><%= game %></td> -->
+        <td>
+          <%= game["stats"]["minionsKilled"] %>
+          <br>
+          <%= game["stats"]["championsKilled"].to_s + "/" + game["stats"]["numDeaths"].to_s + "/" + game["stats"]["assists"].to_s %>
+          <br>
+          <%= game["stats"]["goldEarned"] %>
+        </td>
+        <td>
+          <% items_id = [game["stats"]["item0"].to_s, game["stats"]["item1"].to_s, game["stats"]["item2"].to_s, game["stats"]["item3"].to_s, game["stats"]["item4"].to_s, game["stats"]["item5"].to_s, game["stats"]["item6"].to_s] %>
+
+          <% items_id.each do |id| %>
+            <% if id.nil? %>
+
+            <% else %>
+              <%= image_tag(item_image(id.to_s), class: 'item_icon') %>
+            <% end %>
+          <% end %> 
+        </td>
+        <td>IP: <%= game["ipEarned"] %></td>
+      </tr>
+    <% end %>
+
+  </table></center>
+</div>
