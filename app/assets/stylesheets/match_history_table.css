@@ -1,7 +1,10 @@
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
-    width: 100%;
+}
+
+.matches {
+  margin: 20px;
 }
 
 td, th {
@@ -20,3 +23,10 @@ td, th {
 table td {
   text-align: center;
 }
+
+.grow1 { transition: all .3s ease-in-out; }
+.grow1:hover { transform: scale(1.05); background-color: green;}
+
+.grow2 { transition: all .3s ease-in-out; }
+.grow2:hover { transform: scale(1.05); background-color: red;}
+
