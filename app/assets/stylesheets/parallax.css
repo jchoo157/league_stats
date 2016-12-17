@@ -2,12 +2,19 @@
     /* The image used */
     background-image: url("league.jpg");
 
-    /* Set a specific height */
-    height: 800px; 
-
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    height:100vh;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    position: relative;
+}
+
+body {
+  margin: 0;
 }

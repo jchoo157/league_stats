@@ -1,9 +1,11 @@
 #navbar {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     overflow: hidden;
-    background-color: #333;
+    z-index: 1;
+    background-color: #0F101F;
+    font-family: 'Coda', cursive;
 }
 
 #navbar > li {
@@ -11,17 +13,22 @@
 }
 
 #navbar > li > a {
+
     display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    text-shadow: 1px 1px black;
 }
 
-#navbar > li > a:hover:not(.active) {
-    background-color: #111;
+#navbar > li > a:hover {
+    background-color: #4CAF50;
+}
+
+#navbar > li {
+    border-right: 1px solid #545454;
 }
 
 .active {
-    background-color: #4CAF50;
 }

@@ -12,7 +12,7 @@
 
 .title {
   margin-top: 200px;
-  color: #d1d1d1;
+  color: white;
   text-shadow: 2px 2px #2b2020;
   border-radius: 8px;
   display: inline-block;
@@ -71,10 +71,14 @@ input[type=submit] {
   width: 40px;
 }
 
+.dianabg {
+  background-image: url('dianabg.jpg');
+}
+
 .level {
   margin-top: 28px;
-  margin-left: 30px;
-  text-shadow: 3px 3px black;
+  margin-left: 40px;
+  text-shadow: 1px 1px black;
   color: white; 
   position: absolute;
   font-size: 15px;
@@ -84,3 +88,9 @@ input[type=submit]:hover {
   color: #ffffff;
   background-color: #67db6a;
 }
+
+.grow { transition: all .3s ease-in-out; }
+.grow:hover { transform: scale(1.1); background-color: green;}
+
+.grow-pro { transition: all .3s ease-in-out; }
+.grow-pro:hover { transform: scale(1.1);}

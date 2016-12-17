@@ -1,0 +1,47 @@
+.section1 {
+  background-color: white;
+  padding-bottom: 50px;
+  padding-top: 1px;
+}
+
+.elite {
+  font-family: 'Special Elite', cursive;
+}
+
+.coda {
+  font-family: 'Coda', cursive;
+}
+
+.pro_h1 {
+  font-family: 'Anton', sans-serif; 
+  font-size: 50px; 
+  color: #2d2d2d; 
+  text-shadow: 1px 1px black;
+}
+
+.pro {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+
+}
+
+.sexyline{
+  margin: 25px 0;
+    height: 1px;
+    background: black;
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(white), to(white), color-stop(50%, black));
+}
+
+.pro_div {
+  margin: 5px;
+  display: inline-block;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.pro_h3 {
+  font-family: 'Noticia Text', serif;
+  color: #232323;
+  border-radius: 5px;
+}

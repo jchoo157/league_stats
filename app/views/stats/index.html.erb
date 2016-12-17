@@ -11,3 +11,32 @@
     <% end %>
   </center>
 </div>
+
+<center><div class="section1">
+  <h1 class="pro_h1">Recent Pro Player Games</h1>
+  <div class="sexyline"></div>
+  <div class="pro_div grow-pro">
+    <h3 class="pro_h3">DoubleLift</h3>
+    <%= link_to image_tag('doublelift.jpg', class: 'pro'), stats_path(summoner_name: 'doublelift') %>
+  </div>
+  <div class="pro_div grow-pro">
+    <h3 class="pro_h3">Bjergsen</h3>
+    <%= link_to image_tag('bjergsen.jpg', class: 'pro'), stats_path(summoner_name: "bjergsen") %>
+  </div>
+  <div class="pro_div grow-pro">
+    <h3 class="pro_h3">Hauntzer</h3>
+    <%= link_to image_tag('hauntzer.jpg', class: 'pro'), stats_path(summoner_name: "hauntzer") %>
+  </div>
+  <div class="pro_div grow-pro">
+    <h3 class="pro_h3">Wild Turtle</h3>
+    <%= link_to image_tag('wildturtle.jpg', class: 'pro'), stats_path(summoner_name: "wildturtle") %>
+  </div>
+  <div class="pro_div grow-pro">
+    <h3 class="pro_h3">Svenskeren</h3>
+    <%= link_to image_tag('svenskeren.jpg', class: 'pro'), stats_path(summoner_name: "svenskeren") %>
+  </div>
+  <div class="pro_div grow-pro">
+    <h3 class="pro_h3">Biofrost</h3>
+    <%= link_to image_tag('biofrost.png', class: 'pro', style: 'background-color: black'), stats_path(summoner_name: "biofrost") %>
+  </div>
+</div></center>
