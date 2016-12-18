@@ -7,14 +7,35 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height:100vh;
+    height:80vh;
     width: 100%;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     position: relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
 }
 
 body {
   margin: 0;
+}
+
+.parallax2 { 
+    /* The image used */
+    background-image: url("tsm.png");
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    position: relative;
 }
