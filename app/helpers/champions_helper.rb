@@ -22,4 +22,8 @@ module ChampionsHelper
   def specific_champion_data(champ_id)
     champion_spells[get_champion_name(champ_id)]
   end
+
+  def champion_spell_image(spell_name)
+    'http://ddragon.leagueoflegends.com/cdn/6.24.1/img/spell/' + spell_name
+  end
 end

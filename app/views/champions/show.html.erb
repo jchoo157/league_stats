@@ -1,5 +1,12 @@
+<center>
 <h1><%= specific_champion_data(@id)["name"] + " " + specific_champion_data(@id)["title"] %></h1>
-<%= image_tag(champion_loading_screen_art(@id)) %>
-<%= specific_champion_data(@id)["spells"].each do |spell| %>
-  <%= spell["name"] %>
-<% end %>
+<br>
+<div class="loading-art-div">
+  <%= image_tag(champion_loading_screen_art(@id)) %>
+</div>
+<div class="champ-info-div">
+  <%= specific_champion_data(@id)["spells"].each do |spell| %>
+    <%= image_tag(champion_spell_image(spell["image"]["full"])) %>
+  <% end %>
+</div>
+</center>
