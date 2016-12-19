@@ -3,13 +3,13 @@ $(document).ready(function() {
 });
 
 function champIconHover() {
-  $('.champions').on('mouseenter', '.champ-icon', function(e) {
+  $('.champions').on('mouseenter', '.champ-inline', function(e) {
     e.preventDefault();
-    $(this).parent().parent().find('.champ-info-box').show();
+    $(this).find('.champ-info-box').show();
   });
 
-  $('.champions').on('mouseleave', '.champ-icon', function(e) {
+  $('.champions').on('mouseleave', '.champ-inline', function(e) {
     e.preventDefault();
-    $(this).parent().parent().find('.champ-info-box').hide();
+    $(this).find('.champ-info-box').hide();
   });
 };

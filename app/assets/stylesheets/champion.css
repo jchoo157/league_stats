@@ -21,6 +21,7 @@
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000;  
+    z-index: 0;
 }
 
 .champions {
@@ -33,5 +34,7 @@
     background: orange;
     padding: 5px;
     border: 1px solid black;
+    overflow: visible;
+    z-index: 1000;
 }
 

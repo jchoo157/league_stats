@@ -96,8 +96,8 @@ input[type=submit]:hover {
   background-color: #67db6a;
 }
 
-.grow { transition: all .2s ease-in-out;}
-.grow:hover { transform: scale(1.3);}
+.grow { transition: all .2s ease-in-out; z-index: 1000;}
+.grow:hover { transform: scale(1.3); z-index: 1000;}
 
 .grow-pro { transition: all .3s ease-in-out; }
 .grow-pro:hover { transform: scale(1.1);}
