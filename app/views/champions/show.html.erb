@@ -1,12 +1,14 @@
 <center>
-<h1><%= specific_champion_data(@id)["name"] + " " + specific_champion_data(@id)["title"] %></h1>
+<h1 class="white-h1"><%= specific_champion_data(@id)["name"] + " " + specific_champion_data(@id)["title"] %></h1>
 <br>
 <div class="loading-art-div">
   <%= image_tag(champion_loading_screen_art(@id)) %>
 </div>
 <div class="champ-info-div">
-  <%= specific_champion_data(@id)["spells"].each do |spell| %>
+  <h2>Abilities</h2>
+  <% specific_champion_data(@id)["spells"].each do |spell| %>
     <%= image_tag(champion_spell_image(spell["image"]["full"])) %>
   <% end %>
+  <p>Will eventually add description of each ability, lore, stats, level of difficulty, builds, counters, etc</p>
 </div>
 </center>

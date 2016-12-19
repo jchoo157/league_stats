@@ -5,6 +5,7 @@
 .champ-info-div {
   display: inline-block;
   vertical-align: top;
+  background-color: white;
 }
 
 .champ-inline {
