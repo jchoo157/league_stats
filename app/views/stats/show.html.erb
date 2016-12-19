@@ -24,7 +24,7 @@
       <% end %>
         <td>
           <p class="level"><%= game["stats"]["level"] %></p>
-          <%= image_tag(champion_icon_art(game["championId"]), class: "champ_icon") %>
+          <%= image_tag(get_champion_name(game["championId"]), class: "champ_icon") %>
           <br>
           <%= image_tag(summoner_spell_image(game["spell1"]), class: "summoner_spell_icon") %>
           <%= image_tag(summoner_spell_image(game["spell2"]), class: "summoner_spell_icon") %> 
@@ -52,8 +52,12 @@
           <% end %> 
         </td>
         <td>IP: <%= game["ipEarned"] %></td>
+        <td>
+          <% game["fellowPlayers"].each do |player| %>
+            <%= image_tag(get_champion_name(player["championId"]), class: "champ_icon2") %>
+          <% end %>
+        </td>
       </tr>
-      <tr></tr>
     <% end %>
 
   </table></center>

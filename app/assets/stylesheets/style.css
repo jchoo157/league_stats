@@ -61,6 +61,11 @@ input[type=submit] {
   width: 50px;
 }
 
+.champ_icon2 {
+  height: 20px;
+  width: 20px;
+}
+
 .summoner_spell_icon {
   height: 24px;
   width: 24px;
