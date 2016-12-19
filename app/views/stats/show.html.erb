@@ -1,17 +1,18 @@
 <div>
   <center>
-    <h1><%= @body[@summoner_name]["name"] %></h1>
-    <h3>Level: <%= @body[@summoner_name]["summonerLevel"] %></h3>
+    <h1 class="summoner-name"><%= @body[@summoner_name]["name"] %></h1>
+    <h3 class="summoner-lvl">Level: <%= @body[@summoner_name]["summonerLevel"] %></h3>
   </center>
   
   <center><table class="matches">
-    <tr>
+    <tr class="tr-white">
       <th>Champion</th>
       <th>Damage to Champions</th>
       <!-- <th>json</th> -->
       <th>Stats</th>
       <th>Items</th>
       <th>IP</th>
+      <th>other players</th>
     </tr>
 
     <% @games_body.each do |game| %>
@@ -22,7 +23,7 @@
       <% end %>
         <td>
           <p class="level"><%= game["stats"]["level"] %></p>
-          <%= image_tag(champion_icon_art(game["championId"]), class: "champ_icon") %>
+          <%= image_tag(get_champion_name(game["championId"]), class: "champ_icon") %>
           <br>
           <%= image_tag(summoner_spell_image(game["spell1"]), class: "summoner_spell_icon") %>
           <%= image_tag(summoner_spell_image(game["spell2"]), class: "summoner_spell_icon") %> 
@@ -34,11 +35,9 @@
         </td>
         <!-- <td><%= game %></td> -->
         <td>
-          <%= game["stats"]["minionsKilled"] %>
-          <br>
-          <%= game["stats"]["championsKilled"].to_s + "/" + game["stats"]["numDeaths"].to_s + "/" + game["stats"]["assists"].to_s %>
-          <br>
-          <%= game["stats"]["goldEarned"] %>
+          <p><b>CS:</b> <%= game["stats"]["minionsKilled"] %></p>
+          <p><b>KDA: </b><%= game["stats"]["championsKilled"].to_s + "/" + game["stats"]["numDeaths"].to_s + "/" + game["stats"]["assists"].to_s %></p>
+          <p><b>Gold:</b> <%= game["stats"]["goldEarned"] %></p>
         </td>
         <td>
           <% items_id = [game["stats"]["item0"].to_s, game["stats"]["item1"].to_s, game["stats"]["item2"].to_s, game["stats"]["item3"].to_s, game["stats"]["item4"].to_s, game["stats"]["item5"].to_s, game["stats"]["item6"].to_s] %>
@@ -52,6 +51,10 @@
           <% end %> 
         </td>
         <td>IP: <%= game["ipEarned"] %></td>
+        <td>
+          <!-- Currently working on a refactor -->
+          Refactoring.
+        </td>
       </tr>
     <% end %>
 

@@ -6,7 +6,7 @@
       <br>
 
       <%= form_tag(stats_path, :method => "get") do %>
-        <%= text_field_tag(:summoner_name) %>
+        <%= text_field_tag(:summoner_name, 'DoubleLift') %>
         <br>
         <%= submit_tag("Search") %>
       <% end %>

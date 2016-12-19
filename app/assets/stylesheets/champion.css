@@ -5,4 +5,37 @@
 .champ-info-div {
   display: inline-block;
   vertical-align: top;
+  background-color: white;
 }
+
+.champ-inline {
+  display: inline-block;
+}
+
+.champ_name {
+  position: absolute;
+  margin-top: 55px;
+  margin-left: 7px;
+   color: white;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;  
+    z-index: 0;
+}
+
+.champions {
+  margin: 20px;
+}
+
+.champ-info-box {
+     display:none;
+     position: absolute;
+    background: orange;
+    padding: 5px;
+    border: 1px solid black;
+    overflow: visible;
+    z-index: 1000;
+}
+
