@@ -1,8 +1,13 @@
 <div class="dianabg">
   <center><h1 class="title2 roboto font-size30">Champions</h1></center>
-  <center><div>
-    <% @champions.each do |champion| %>
-      <%= link_to image_tag(champion[0] + ".png", class: 'champ-icon grow'), champion_path(champion[1]["id"]) %>
-    <% end %>
-  </div></center>
+  <center>
+    <div>
+      <% @champions.each do |champion| %>
+        <div class="champ-inline grow">
+          <h6 class="champ_name"><%= champion[1]["name"] %></h6>
+          <%= link_to image_tag(champion[0] + ".png", class: 'champ-icon'), champion_path(champion[1]["id"]) %>
+        </div>
+      <% end %>
+    </div>
+  </center>
 </div>
