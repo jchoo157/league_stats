@@ -19,10 +19,10 @@
 }
 
 .title2 {
-  color: #d1d1d1;
+  color: white;
   text-shadow: 2px 2px #2b2020;
   border-radius: 8px;
-  display: inline-block;
+  display: inline-block; 
 }
 
 input[type=text] {

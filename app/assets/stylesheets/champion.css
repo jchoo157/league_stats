@@ -27,3 +27,11 @@
   margin: 20px;
 }
 
+.champ-info-box {
+     display:none;
+     position: absolute;
+    background: orange;
+    padding: 5px;
+    border: 1px solid black;
+}
+
