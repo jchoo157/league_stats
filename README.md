@@ -7,21 +7,21 @@ You can check out the live version [here] (https://leaguestats2016.herokuapp.com
 
 ## Main Page
 
-![main] (https://github.com/jchoo157/league_stats/blob/development/app/assets/images/leaguestats-main.gif)
+![main] (https://github.com/jchoo157/league_stats/app/assets/images/leaguestats-main.gif)
 
 ## Searching a Player
 
-![search] (https://github.com/jchoo157/league_stats/blob/development/app/assets/images/leaguestats-search.gif)
+![search] (https://github.com/jchoo157/league_stats/app/assets/images/leaguestats-search.gif)
 
 ## Champions
 
-![chamions] (https://github.com/jchoo157/league_stats/blob/development/app/assets/images/leaguestats-champions.gif)
+![chamions] (https://github.com/jchoo157/league_stats/app/assets/images/leaguestats-champions.gif)
 
 ## Tech Used
 
 * [Ruby on Rails](http://api.rubyonrails.org/) - Backend API framework used
 * [jQuery](https://jquery.com/) - Write less, do more with jQuery
-* [League of Legends API](https://developer.riotgames.com/)
+* [League of Legends API](https://developer.riotgames.com/) - API
 * [HTTParty](https://github.com/jnunemaker/httparty) - Library used for making HTTP requests
 
 ## Author
