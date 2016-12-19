@@ -1,11 +1,11 @@
 <div>
   <center>
-    <h1><%= @body[@summoner_name]["name"] %></h1>
-    <h3>Level: <%= @body[@summoner_name]["summonerLevel"] %></h3>
+    <h1 class="summoner-name"><%= @body[@summoner_name]["name"] %></h1>
+    <h3 class="summoner-lvl">Level: <%= @body[@summoner_name]["summonerLevel"] %></h3>
   </center>
   
   <center><table class="matches">
-    <tr>
+    <tr class="tr-white">
       <th>Champion</th>
       <th>Damage to Champions</th>
       <!-- <th>json</th> -->
@@ -16,7 +16,6 @@
     </tr>
 
     <% @games_body.each do |game| %>
-      <%= game %>
       <% if game["stats"]["win"] == false %>
         <tr class="loss grow2">
       <% else %>
