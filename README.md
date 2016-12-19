@@ -7,15 +7,15 @@ You can check out the live version [here] (https://leaguestats2016.herokuapp.com
 
 ## Main Page
 
-![main] (https://github.com/jchoo157/league_stats/app/assets/images/leaguestats-main.gif)
+![main] (https://github.com/jchoo157/league_stats/blob/master/app/assets/images/leaguestats-main.gif)
 
 ## Searching a Player
 
-![search] (https://github.com/jchoo157/league_stats/app/assets/images/leaguestats-search.gif)
+![search] (https://github.com/jchoo157/league_stats/blob/master/app/assets/images/leaguestats-search.gif)
 
 ## Champions
 
-![chamions] (https://github.com/jchoo157/league_stats/app/assets/images/leaguestats-champions.gif)
+![chamions] (https://github.com/jchoo157/league_stats/blob/master/app/assets/images/leaguestats-champions.gif)
 
 ## Tech Used
 
