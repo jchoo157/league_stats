@@ -12,9 +12,11 @@
       <th>Stats</th>
       <th>Items</th>
       <th>IP</th>
+      <th>other players</th>
     </tr>
 
     <% @games_body.each do |game| %>
+      <%= game %>
       <% if game["stats"]["win"] == false %>
         <tr class="loss grow2">
       <% else %>
@@ -34,11 +36,9 @@
         </td>
         <!-- <td><%= game %></td> -->
         <td>
-          <%= game["stats"]["minionsKilled"] %>
-          <br>
-          <%= game["stats"]["championsKilled"].to_s + "/" + game["stats"]["numDeaths"].to_s + "/" + game["stats"]["assists"].to_s %>
-          <br>
-          <%= game["stats"]["goldEarned"] %>
+          <p><b>CS:</b> <%= game["stats"]["minionsKilled"] %></p>
+          <p><b>KDA: </b><%= game["stats"]["championsKilled"].to_s + "/" + game["stats"]["numDeaths"].to_s + "/" + game["stats"]["assists"].to_s %></p>
+          <p><b>Gold:</b> <%= game["stats"]["goldEarned"] %></p>
         </td>
         <td>
           <% items_id = [game["stats"]["item0"].to_s, game["stats"]["item1"].to_s, game["stats"]["item2"].to_s, game["stats"]["item3"].to_s, game["stats"]["item4"].to_s, game["stats"]["item5"].to_s, game["stats"]["item6"].to_s] %>
@@ -53,6 +53,7 @@
         </td>
         <td>IP: <%= game["ipEarned"] %></td>
       </tr>
+      <tr></tr>
     <% end %>
 
   </table></center>
