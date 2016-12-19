@@ -1,0 +1,345 @@
+.loading-art-div {
+  display: inline-block;
+}
+
+.champ-info-div {
+  display: inline-block;
+  vertical-align: top;
+  background-color: white;
+}
+
+.champ-inline {
+  display: inline-block;
+}
+
+.champ_name {
+  position: absolute;
+  margin-top: 55px;
+  margin-left: 7px;
+   color: white;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;  
+    z-index: 0;
+}
+
+.champions {
+  margin: 20px;
+}
+
+.champ-info-box {
+     display:none;
+     position: absolute;
+    background: orange;
+    padding: 5px;
+    border: 1px solid black;
+    overflow: visible;
+    z-index: 1000;
+}
+
+.section1 {
+  background-color: white;
+  padding-bottom: 50px;
+  padding-top: 1px;
+}
+
+.resize-center {
+}
+
+.white-text {
+  color: white;
+}
+
+.white-h1 {
+  color: white;
+}
+
+.elite {
+  font-family: 'Special Elite', cursive;
+}
+
+.coda {
+  font-family: 'Coda', cursive;
+}
+
+.pro_h1 {
+  font-family: 'Anton', sans-serif; 
+  font-size: 50px; 
+  color: #2d2d2d; 
+  text-shadow: 1px 1px black;
+}
+
+.pro {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+
+}
+
+.sexyline{
+  margin: 25px 0;
+    height: 1px;
+    background: black;
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(white), to(white), color-stop(50%, black));
+}
+
+.pro_div {
+  margin: 5px;
+  display: inline-block;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.pro_h3 {
+  font-family: 'Noticia Text', serif;
+  color: #232323;
+  border-radius: 5px;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+}
+
+.summoner-name {
+  color: white;
+}
+
+.summoner-lvl {
+  color: white;
+}
+
+.matches {
+  margin: 20px;
+}
+
+.tr-white {
+  background-color: white;
+}
+
+.enemies {
+  background-color: purple;
+}
+
+.allies {
+  background-color: blue;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    padding: 8px;
+}
+
+.win {
+  background-color: #4CAF50;
+}
+
+.loss {
+  background-color: #ef4640;
+}
+
+table td {
+  text-align: center;
+}
+
+.grow1 { transition: all .3s ease-in-out; }
+.grow1:hover { transform: scale(1.05); background-color: green;}
+
+.grow2 { transition: all .3s ease-in-out; }
+.grow2:hover { transform: scale(1.05); background-color: red;}
+
+#navbar {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    z-index: 1;
+    background-color: #0F101F;
+    font-family: 'Coda', cursive;
+}
+
+#navbar > li {
+    float: left;
+}
+
+#navbar > li > a {
+
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-shadow: 1px 1px black;
+}
+
+#navbar > li > a:hover {
+    background-color: #4CAF50;
+}
+
+#navbar > li {
+    border-right: 1px solid #545454;
+}
+
+.active {
+}
+.parallax { 
+    /* The image used */
+    background-image: url("league.jpg");
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:80vh;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    position: relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+
+body {
+  margin: 0;
+}
+
+.parallax2 { 
+    /* The image used */
+    background-image: url("tsm.png");
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    position: relative;
+}
+.roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+.raleway {
+  font-family: 'Raleway', sans-serif;
+}
+
+.font-size30 {
+  font-size: 50px;
+}
+
+.title {
+  color: white;
+  text-shadow: 2px 2px #2b2020;
+  border-radius: 8px;
+  display: inline-block;
+  
+}
+
+.title2 {
+  color: white;
+  text-shadow: 2px 2px #2b2020;
+  border-radius: 8px;
+  display: inline-block; 
+}
+
+input[type=text] {
+    width: 400px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('search.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    width: 200px;
+    font-size: 20px;
+    padding: 10px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.champ-icon {
+  height: 75px;
+  width: 75px;
+  border: 2px solid #48A7C5;
+}
+
+.champ_icon {
+  height: 50px;
+  width: 50px;
+}
+
+.champ_icon2 {
+  height: 30px;
+  width: 30px;
+}
+
+.summoner_spell_icon {
+  height: 24px;
+  width: 24px;
+}
+
+.item_icon {
+  height: 40px;
+  width: 40px;
+}
+
+body {
+  background: url(bg.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.level {
+  margin-top: 28px;
+  margin-left: 40px;
+  text-shadow: 1px 1px black;
+  color: white; 
+  position: absolute;
+  font-size: 15px;
+}
+
+input[type=submit]:hover {
+  color: #ffffff;
+  background-color: #67db6a;
+}
+
+.grow { transition: all .2s ease-in-out; z-index: 1000;}
+.grow:hover { transform: scale(1.3); z-index: 1000;}
+
+.grow-pro { transition: all .3s ease-in-out; }
+.grow-pro:hover { transform: scale(1.1);}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
