@@ -53,9 +53,21 @@
         </td>
         <td>IP: <%= game["ipEarned"] %></td>
         <td>
-          <% game["fellowPlayers"].each do |player| %>
-            <%= image_tag(get_champion_name(player["championId"]), class: "champ_icon2") %>
-          <% end %>
+          <div class="allies">
+            <% game["fellowPlayers"].each do |player| %>
+              <% if player["teamId"] == game["teamId"] %>
+                <%= image_tag(get_champion_name(player["championId"]), class: "champ_icon2") %>
+              <% end %>
+            <% end %>
+          </div>
+
+          <div class="enemies">
+            <% game["fellowPlayers"].each do |player| %>
+              <% if player["teamId"] != game["teamId"] %>
+                <%= image_tag(get_champion_name(player["championId"]), class: "champ_icon2") %>
+              <% end %>
+            <% end %>
+          </div>
         </td>
       </tr>
     <% end %>
