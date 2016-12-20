@@ -3,12 +3,12 @@
   <center>
     <div class="champions">
       <% @champions.each do |champion| %>
-        <div class="champ-inline grow">
+        <div class="champ-inline grow" alt="<%= champion[1]["id"] %>">
+          <div class="champ-info-box">
+            
+          </div>
           <h5 class="champ_name"><%= champion[1]["name"] %></h5>
           <%= link_to image_tag(champion[0] + ".png", class: 'champ-icon'), champion_path(champion[1]["id"]) %>
-          <div class="champ-info-box">
-            <%= champion %>
-          </div>
         </div>
       <% end %>
     </div>

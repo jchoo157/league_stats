@@ -5,6 +5,8 @@ $(document).ready(function() {
 function champIconHover() {
   $('.champions').on('mouseenter', '.champ-inline', function(e) {
     e.preventDefault();
+    var champName = $(this).find('.champ_name').text();
+
     $(this).find('.champ-info-box').show();
   });
 
