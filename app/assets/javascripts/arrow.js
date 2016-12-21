@@ -1,17 +1,10 @@
 $(document).ready(function() {
-  $(window).scroll(function() {
-    if ($('.parallax').scrollTop() > 100) {
-      $('.arrow').fadeIn();
-    } else {
-      $('.arrow').fadeOut();
-    }
-  }); 
-
-  $(window).scroll(function() {
-    if ($('.parallax').scrollTop() < 100) {
-      $('.arrow').fadeIn();
-    } else {
-      $('.arrow').fadeOut();
-    }
-  });
+  window.addEventListener("scroll",function() { 
+     if(window.scrollY > 100) {
+        $('.arrow').fadeOut();
+     }
+     else {
+        $('.arrow').fadeIn();
+     }
+  },false);
 })
