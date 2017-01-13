@@ -4,7 +4,6 @@ class StatsController < ApplicationController
   include HTTParty
 
   def index
-    response = HTTParty.get(base_uri('choobie'))
     # doublelift
     doublelift_response = HTTParty.get(base_uri('doublelift'))
     @doublelift_body = JSON.parse(doublelift_response.body)
