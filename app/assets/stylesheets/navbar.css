@@ -41,5 +41,19 @@ input[type=text] {
   .title {
     font-size: 30px !important;
   }
+
+  .pro_h1 {
+    font-size: 30px !important;
+  }
+
+  .pro {
+    width: 80px;
+    height: 80px;
+  }
+
+  .pro_h3 {
+    font-size: 15px !important;
+  }
+
 }
 
