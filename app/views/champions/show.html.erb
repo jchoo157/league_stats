@@ -1,5 +1,5 @@
 <center>
-<h1 class="white-h1"><%= specific_champion_data(@id)["name"] + " " + specific_champion_data(@id)["title"] %></h1>
+<h1 class="white-h1"><span class="champ_name_blue"><%= specific_champion_data(@id)["name"] %></span> <%= specific_champion_data(@id)["title"] %></h1>
 <br>
 <div class="loading-art-div">
   <%= image_tag(champion_loading_screen_art(@id)) %>
